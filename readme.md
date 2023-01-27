@@ -1,16 +1,24 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# Lab | API wrappers - Create your collection of songs & audio features
+# Lab | Web Scraping Single Page
 
+#### Business goal:
 
-#### Instructions 
+- Check the `case_study_gnod.md` file.
+- Make sure you've understood the big picture of your project:
 
+  - the goal of the company (`Gnod`),
+  - their current product (`Gnoosic`),
+  - their strategy, and
+  - how your project fits into this context.
 
-To move forward with the project, you need to create a collection of songs with their audio features - as large as possible! 
+  Re-read the business case and the e-mail from the CTO, take a look at the flowchart and create an initial Trello board with the tasks you think you'll have to accomplish.
 
-These are the songs that we will cluster. And, later, when the user inputs a song, we will find the cluster to which the song belongs and recommend a song from the same cluster.
-The more songs you have, the more accurate and diverse recommendations you'll be able to give. Although... you might want to make sure the collected songs are "curated" in a certain way. Try to find playlists of songs that are diverse, but also that meet certain standards.
+#### Instructions - Scraping popular songs
 
-The process of sending hundreds or thousands of requests can take some time - it's normal if you have to wait a few minutes (or, if you're ambitious, even hours) to get all the data you need.
+Your product will take a song as an input from the user and will output another song (the recommendation). In most cases, the recommended song will have to be similar to the inputted song, but the CTO thinks that if the song is on the top charts at the moment, the user will enjoy more a recommendation of a song that's also popular at the moment.
 
-An idea for collecting as many songs as possible is to start with all the songs of a big, diverse playlist and then go to every artist present in the playlist and grab every song of every album of that artist. The amount of songs you'll be collecting per playlist will grow exponentially!
+You have find data on the internet about currently popular songs. Billboard maintains a weekly Top 100 of "hot" songs here: [https://www.billboard.com/charts/hot-100](https://www.billboard.com/charts/hot-100).
+
+It's a good place to start! Scrape the current top 100 songs and their respective artists, and put the information into a pandas dataframe.
+
